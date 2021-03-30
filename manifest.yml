@@ -1,0 +1,7 @@
+---
+applications:
+- name: securitytxt
+  memory: 64M
+  path: ./dist
+  buildpacks:
+  - staticfile_buildpack
