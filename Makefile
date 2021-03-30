@@ -10,6 +10,7 @@ build: clean
 	cp security.txt dist/
 	echo -n "Expires: " >> dist/security.txt
 	date -d '+3 months' -R >> dist/security.txt
+	echo "# Generated at: https://github.com/alphagov/security.txt" >> dist/security.txt
 	cp dist/security.txt dist/.well-known/
 	cp paas_app/* dist/
 
