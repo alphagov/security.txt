@@ -1,4 +1,4 @@
-name: Test and deploy to staging and production
+name: Deploy to GOV.UK PaaS
 
 on:
   workflow_dispatch:
