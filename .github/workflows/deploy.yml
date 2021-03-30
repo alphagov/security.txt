@@ -10,7 +10,8 @@ on:
 
 jobs:
   deploy-to-paas:
-    env: live_paas
+    runs-on: ubuntu-latest
+    environment: live_paas
     name: Deploy to GOV.UK PaaS
     defaults:
       run:
