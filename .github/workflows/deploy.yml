@@ -2,7 +2,14 @@ name: Deploy to GOV.UK PaaS
 
 on:
   workflow_dispatch:
+  push:
+    branches:    
+      - 'main'
+    paths:
+      - 'security.txt'
   pull_request:
+    branches:    
+      - 'main'
     paths:
       - 'security.txt'
   schedule:
