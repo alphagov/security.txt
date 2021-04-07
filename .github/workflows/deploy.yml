@@ -7,11 +7,7 @@ on:
       - 'main'
     paths:
       - 'security.txt'
-  pull_request:
-    branches:    
-      - 'main'
-    paths:
-      - 'security.txt'
+      - 'thanks.txt'
   schedule:
     - cron: '0 13 * * 2'
 
