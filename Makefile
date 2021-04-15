@@ -12,10 +12,10 @@ build: clean
 	
 	echo "" >> dist/security.txt
 	echo -n "Last-Updated: " >> dist/security.txt
-	date -R >> dist/security.txt
+	date --rfc-3339='seconds' >> dist/security.txt
 	
 	echo -n "Expires: " >> dist/security.txt
-	date -d '+3 months' -R >> dist/security.txt
+	date -d '+3 months' --rfc-3339='seconds' >> dist/security.txt
 	
 	echo "" >> dist/security.txt
 	echo "# Generated at: https://github.com/alphagov/security.txt" >> dist/security.txt
