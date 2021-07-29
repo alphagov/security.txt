@@ -1,2 +1,4 @@
 # We would like to thank the following:
 # [yyyy-mm-dd] Name -- description
+
+[2020-02-11] Jonathan Leitschuh -- potential MITM using HTTP to resolve some GOV.UK Pay Maven dependencies
