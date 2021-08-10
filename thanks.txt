@@ -2,3 +2,4 @@
 # [yyyy-mm-dd] Name -- description
 
 [2020-02-11] Jonathan Leitschuh -- potential MITM using HTTP to resolve some GOV.UK Pay Maven dependencies
+[2021-07-21] Artem Smotrakov -- potential timing attack on GOV.UK Pay Webhook signature checks
