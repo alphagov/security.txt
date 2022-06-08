@@ -1,6 +1,9 @@
 # We would like to thank the following:
 # [yyyy-mm-dd] Name -- description
 
+[2022-06-06] Tom Samson -- potential vulnerability to Log4j exploit in GOV.UK hosted application
+[2022-06-06] Michael Minchinton -- cached URLs linking to sensitive files on a GOV.UK service
+[2022-05-27] Ayush Juneja -- potential vulnerability with GOV.UK contact forms
 [2022-01-17] Mohd.Danish Abid -- potential directory security misconfiguration on gdscareers.gov.uk
 [2021-07-21] Artem Smotrakov -- potential timing attack on GOV.UK Pay Webhook signature checks
 [2020-02-11] Jonathan Leitschuh -- potential MITM using HTTP to resolve some GOV.UK Pay Maven dependencies
