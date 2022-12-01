@@ -1,6 +1,7 @@
 # We would like to thank the following:
 # [yyyy-mm-dd] Name -- description
 
+[2022-12-1] Corrie Sloot -- found DNS misconfiguration for Government Communication Services
 [2022-10-10] Ilie Alexandru -- reported a XSS vulnerability in a GOV.UK hosted site
 [2022-10-05] Souvik Kandar -- found a security misconfiguration for the civil service learning platform
 [2022-06-06] Tom Samson -- potential vulnerability to Log4j exploit in GOV.UK hosted application
