@@ -1,6 +1,7 @@
 # We would like to thank the following:
 # [yyyy-mm-dd] Name -- description
 
+[2023-06-12] D4rkrai - reported a refelected XSS vulnerability in a GOV.UK hosted site
 [2023-06-07] Christophe Tafani-Dereeper -- reported a security misconfiguration in a GOV.UK AWS service
 [2023-05-16] Rajesh Thapa -- potential takeover vulnerability within data.gov.uk prototype
 [2023-04-11] Sanjok Karki(thesanjok) -- reported a Sensitive Information Disclosure vulnerability to Cabinet Office
