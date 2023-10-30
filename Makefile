@@ -6,22 +6,22 @@ deploy: build
 	cf7 push securitytxt --strategy rolling
 
 build: clean
-	mkdir -p dist/.well-known/
-	cp security.txt dist/
-	cp thanks.txt dist/
+	mkdir -p /usr/share/nginx/html/.well-known/
+	cp security.txt /usr/share/nginx/html/
+	cp thanks.txt /usr/share/nginx/html/
 	
-	echo "" >> dist/security.txt
-	echo -n "Last-Updated: " >> dist/security.txt
-	date --rfc-3339='seconds' >> dist/security.txt
+	echo "" >> /usr/share/nginx/html/security.txt
+	echo -n "Last-Updated: " >> /usr/share/nginx/html/security.txt
+	date --rfc-3339='seconds' >> /usr/share/nginx/html/security.txt
 	
-	echo -n "Expires: " >> dist/security.txt
-	date -d '+3 months' --rfc-3339='seconds' >> dist/security.txt
+	echo -n "Expires: " >> /usr/share/nginx/html/security.txt
+	date -d '+3 months' --rfc-3339='seconds' >> /usr/share/nginx/html/security.txt
 	
-	echo "" >> dist/security.txt
-	echo "# Generated at: https://github.com/alphagov/security.txt" >> dist/security.txt
+	echo "" >> /usr/share/nginx/html/security.txt
+	echo "# Generated at: https://github.com/alphagov/security.txt" >> /usr/share/nginx/html/security.txt
 	
-	cp dist/security.txt dist/.well-known/
-	cp paas_app/* dist/
+	cp /usr/share/nginx/html/security.txt /usr/share/nginx/html/.well-known/
+	cp paas_app/* /usr/share/nginx/html/
 
 clean:
 	rm -rf dist
