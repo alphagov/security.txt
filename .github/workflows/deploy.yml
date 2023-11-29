@@ -15,7 +15,7 @@ jobs:
   deploy-to-paas:
     runs-on: ubuntu-latest
     environment: live_paas
-    name: Deploy to GOV.UK PaaS
+    name: Test
     defaults:
       run:
         shell: bash
@@ -27,13 +27,15 @@ jobs:
     - run: |
         cd main/
 
-        wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-        echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-        sudo apt-get update
-        sudo apt-get install cf7-cli
+        aws s3 ls --profile cst-test
 
-        cf7 api https://api.cloud.service.gov.uk
-        cf7 auth "${{ secrets.PAAS_USER }}" "${{ secrets.PAAS_PASS }}"
-        cf target -o gds-security -s live
+        # wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+        # echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+        # sudo apt-get update
+        # sudo apt-get install cf7-cli
 
-        make deploy
+        # cf7 api https://api.cloud.service.gov.uk
+        # cf7 auth "${{ secrets.PAAS_USER }}" "${{ secrets.PAAS_PASS }}"
+        # cf target -o gds-security -s live
+
+        # make deploy
