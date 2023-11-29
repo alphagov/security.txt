@@ -6,7 +6,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - run: |
-        aws sts get-caller-identity
-        aws s3 ls --profile cst-test
+        aws sts get-caller-identity --region eu-west-2
+        # aws s3 ls --profile cst-test
         make build
     
