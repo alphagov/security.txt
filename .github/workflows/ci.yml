@@ -3,5 +3,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: GOVUK_DOCKER_DIR=. make build
+    - run: |
+        ls -lsa
+        make build
     
