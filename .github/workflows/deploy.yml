@@ -23,9 +23,9 @@ jobs:
       with:
         path: main
     - run: |
-        cd main/
+        # cd main/
 
-        aws s3 ls --profile cst-test
+        # aws s3 ls --profile cst-test
 
         # wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
         # echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
