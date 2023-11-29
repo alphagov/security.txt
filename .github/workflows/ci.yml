@@ -6,6 +6,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - run: |
-        ls -lsa
+        aws s3 ls --profile cst-test
         make build
     
