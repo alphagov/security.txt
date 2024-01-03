@@ -1,6 +1,10 @@
 # We would like to thank the following:
 # [yyyy-mm-dd] Name -- description
 
+[2023-12-18] Swapnil Kothawade - identified multiple access control misconfigurations in a gov.uk service
+[2023-12-10] Swapnil Kothawade - identified access control misconfigurations in a gov.uk service
+[2023-11-24] Swapnil Kothawade - identified access control misconfigurations in a gov.uk service
+[2023-11-19] Omkar Tawade - reported a security misconfiguration in a GOV.UK domain
 [2023-06-12] D4rkrai - reported a refelected XSS vulnerability in a GOV.UK hosted site
 [2023-06-07] Christophe Tafani-Dereeper -- reported a security misconfiguration in a GOV.UK AWS service
 [2023-05-16] Rajesh Thapa -- potential takeover vulnerability within data.gov.uk prototype
