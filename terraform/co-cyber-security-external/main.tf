@@ -13,7 +13,7 @@ module "securitytxt" {
   name_prefix = "prod"
 
   create_route53_hosted_zone = false
-  route53_hosted_zone_id     = "Z2TPWWRT9N0BOM"
+  route53_hosted_zone_id     = "Z09763553BEMKGZH7V845"
 
 
 }

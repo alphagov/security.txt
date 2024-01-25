@@ -8,7 +8,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "gds-security-terraform"
+    bucket  = "co-cyber-security-external-state"
     key     = "terraform/state/account/576485064911/security_txt.tfstate"
     region  = "eu-west-2"
     profile = "co-cyber-security-external"
