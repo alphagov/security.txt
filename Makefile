@@ -3,7 +3,10 @@
 .PHONY = clean
 
 deploy: build
-	cf7 push securitytxt --strategy rolling
+	echo "Deploy to non-live"
+	aws s3 cp --profile cst-test --recursive dist s3://dev-cs-security.staging.gds-cyber-security.digital-website
+	echo "Deploy to live"
+	aws s3 cp --profile co-cyber-security-external --recursive dist s3://prod-vdp.cabinetoffice.gov.uk-website
 
 build: clean
 	mkdir -p dist/.well-known/
@@ -11,11 +14,11 @@ build: clean
 	cp thanks.txt dist/
 	
 	echo "" >> dist/security.txt
-	echo -n "Last-Updated: " >> dist/security.txt
-	date --rfc-3339='seconds' >> dist/security.txt
+	echo "Last-Updated: " >> dist/security.txt
+	date +"%Y-%m-%dT%H:%M:%SZ" >> dist/security.txt
 	
-	echo -n "Expires: " >> dist/security.txt
-	date -d '+3 months' --rfc-3339='seconds' >> dist/security.txt
+	echo "Expires: " >> dist/security.txt
+	date -v+3m +"%Y-%m-%dT%H:%M:%SZ" >> dist/security.txt
 	
 	echo "" >> dist/security.txt
 	echo "# Generated at: https://github.com/alphagov/security.txt" >> dist/security.txt
