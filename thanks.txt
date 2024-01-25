@@ -1,6 +1,7 @@
 # We would like to thank the following:
 # [yyyy-mm-dd] Name -- description
 
+[2023-12-28] Suvam Adhikari (WHOISshuvam) - identified Improper Authorization in the ResilienceDirect Development Instance
 [2023-12-18] Swapnil Kothawade - identified multiple access control misconfigurations in a gov.uk service
 [2023-12-10] Swapnil Kothawade - identified access control misconfigurations in a gov.uk service
 [2023-11-24] Swapnil Kothawade - identified access control misconfigurations in a gov.uk service
