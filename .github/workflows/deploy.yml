@@ -1,42 +1,35 @@
+---
 name: Trigger action for GOV.UK_co-cyber-security-external
+description: Trigger makefile for co-cyber-security-external
 
 on:
+  pull_request:
   workflow_dispatch:
   push:
-    branches:    
+    branches:
       - 'main'
-    paths:
-      - 'security.txt'
-      - 'thanks.txt'
   schedule:
-     - cron: "0 2 * * MON-FRI" # Runs at 02:00 UTC
-      workflow_dispatch:
-jobs:
- deploy-to-co-cyber-security-external:
-  # Trigger makefile for co-cyber-security-external
-    runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be triggered and executed  as part of the job
-    steps:
-       - name: Show workflow_run
-    env:
-      co-cyber-security-external
-      name: Deploy to GOV.UK co-cyber-security-external
-      defaults:
-    run:
-        shell: bash
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - name: Checkout
+    - cron: "0 2 * * 1-5"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Checkout repo
       uses: actions/checkout@v2
-    - name: Configure AWS Credentials
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.8"
+
+    - name: Set up AWS creds
       uses: aws-actions/configure-aws-credentials@v1
       with:
-     role-to-assume: arn:aws:iam::576485064911:role/github_actions_role
-     role-session-name: Github
-     aws-region: ${{ env.AWS_REGION }}
-    
-       - name: Deploy and update makefile
-        path: main
-    - run: |
-        cd main/
-      run: make deploy
+        role-to-assume: ${{ secrets.ROLE_TO_ASSUME_ARN }}
+        role-session-name: Github
+        aws-region: eu-west-2
+
+    - name: Run Makefile
+      run: (cd ${{ github.action_path }} && make deploy)
+      shell: bash
