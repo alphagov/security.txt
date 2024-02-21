@@ -6,3 +6,9 @@ Contact: https://www.gov.uk/contact/govuk
 Acknowledgments: https://vdp.cabinetoffice.gov.uk/thanks.txt
 
 Hiring: https://www.civilservicejobs.service.gov.uk/
+
+Last-Updated: DATE_NOW
+
+Expires: DATE_EXP
+
+Generated at: https://github.com/alphagov/security.txt
