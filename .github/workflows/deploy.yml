@@ -2,7 +2,6 @@
 name: Trigger action for GOV.UK_co-cyber-security-external
 
 on:
-  pull_request:
   workflow_dispatch:
   push:
     branches:
