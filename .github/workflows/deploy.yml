@@ -23,10 +23,9 @@ jobs:
           python-version: "3.8"
 
       - name: Set up AWS creds
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: "arn:aws:iam::576485064911:role/github_actions_role"
-          role-session-name: Github
+          role-to-assume: arn:aws:iam::576485064911:role/github_actions_role
           aws-region: eu-west-2
 
       - name: Run Makefile
