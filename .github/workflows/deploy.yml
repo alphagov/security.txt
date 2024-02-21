@@ -1,0 +1,35 @@
+---
+name: Deploy and update security.txt
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+  schedule:
+    - cron: "0 2 * * 1"
+
+jobs:
+  deploy-to-co-cyber-security-external:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.8"
+
+      - name: Set up AWS creds
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.ROLE_TO_ASSUME_ARN }}
+          aws-region: eu-west-2
+
+      - name: Run Makefile
+        run: bash deploy.sh
+        shell: bash
