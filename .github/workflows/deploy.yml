@@ -32,5 +32,5 @@ jobs:
           aws-region: eu-west-2
 
       - name: Run Makefile
-        run: ls ${{ github.action_path }} -lsa
+        run: bash deploy.sh
         shell: bash
