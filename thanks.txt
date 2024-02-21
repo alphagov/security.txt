@@ -1,6 +1,7 @@
 # We would like to thank the following:
 # [yyyy-mm-dd] Name -- description
 
+[2024-01-29] Boya Vamshi Krishna (bittu_vamshi_) - reported a Open Redirect vulnerability in a gov.uk service
 [2023-12-31] Sheyko Andrey (kennebecriver) - reported a sub-domain takeover vulnerability for Cabinet Office service
 [2023-12-28] Suvam Adhikari (WHOISshuvam) - identified improper authorization in a gov.uk development instance
 [2023-12-18] Swapnil Kothawade - identified multiple access control misconfigurations in a gov.uk service
