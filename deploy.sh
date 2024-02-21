@@ -1,7 +1,8 @@
 #!/bin/bash
 
+date -d "+3 months" --rfc-3339='seconds'
 DATE_NOW=$(date --rfc-3339='seconds')
-DATE_EXP=$(date -d '+3 months' --rfc-3339='seconds')
+DATE_EXP=$(date -d "+3 months" --rfc-3339='seconds')
 mkdir -p ./paas_app/.well-known/
 cp ./security.txt ./paas_app/security.txt
 cp ./thanks.txt ./paas_app/thanks.txt
