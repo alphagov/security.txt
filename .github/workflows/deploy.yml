@@ -1,5 +1,5 @@
 ---
-name: Trigger action for GOV.UK_co-cyber-security-external
+name: Deploy and update security.txt
 
 on:
   workflow_dispatch:
