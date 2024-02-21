@@ -28,7 +28,7 @@ jobs:
       - name: Set up AWS creds
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::576485064911:role/github_actions_role
+          role-to-assume: ${{ secrets.ROLE_TO_ASSUME_ARN }}
           aws-region: eu-west-2
 
       - name: Run Makefile
