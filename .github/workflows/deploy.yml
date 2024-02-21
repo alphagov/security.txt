@@ -1,6 +1,5 @@
 ---
 name: Trigger action for GOV.UK_co-cyber-security-external
-description: Trigger makefile for co-cyber-security-external
 
 on:
   pull_request:
@@ -11,25 +10,25 @@ on:
   schedule:
     - cron: "0 2 * * 1-5"
 
-runs:
-  using: "composite"
+jobs:
+  deploy-to-co-cyber-security-external:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
 
-  steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
 
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: "3.8"
+      - name: Set up AWS creds
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.ROLE_TO_ASSUME_ARN }}
+          role-session-name: Github
+          aws-region: eu-west-2
 
-    - name: Set up AWS creds
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        role-to-assume: ${{ secrets.ROLE_TO_ASSUME_ARN }}
-        role-session-name: Github
-        aws-region: eu-west-2
-
-    - name: Run Makefile
-      run: (cd ${{ github.action_path }} && make deploy)
-      shell: bash
+      - name: Run Makefile
+        run: (cd ${{ github.action_path }} && make deploy)
+        shell: bash
