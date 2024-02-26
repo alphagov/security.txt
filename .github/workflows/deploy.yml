@@ -30,6 +30,10 @@ jobs:
           role-to-assume: ${{ secrets.ROLE_TO_ASSUME_ARN }}
           aws-region: eu-west-2
 
-      - name: Run Makefile
-        run: bash deploy.sh
+      - name: Build
+        run: bash build.sh
+        shell: bash
+
+      - name: Deploy
+        run: aws s3 cp --recursive paas_app s3://prod-vdp.cabinetoffice.gov.uk-website
         shell: bash

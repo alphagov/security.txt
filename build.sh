@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Manage content on the S3 for prod account.
+# Building app inside paas_app directory
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     DATE_NOW=$(date --rfc-3339='seconds')
@@ -13,8 +13,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     cp ./security.txt ./paas_app/security.txt
     cp ./thanks.txt ./paas_app/thanks.txt
     cp ./paas_app/security.txt ./paas_app/.well-known/security.txt
-
-    aws s3 cp --recursive paas_app s3://prod-vdp.cabinetoffice.gov.uk-website
 else
     echo "Due to different output format in date, only Linux is supported"
     exit 1
