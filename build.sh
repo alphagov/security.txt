@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Building app inside paas_app directory
+# Build security.txt app
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     DATE_NOW=$(date --rfc-3339='seconds')

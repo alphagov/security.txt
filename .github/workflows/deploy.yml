@@ -35,5 +35,6 @@ jobs:
         shell: bash
 
       - name: Deploy
-        run: aws s3 cp --recursive paas_app s3://prod-vdp.cabinetoffice.gov.uk-website
+        run: |
+          aws s3 cp --recursive paas_app s3://prod-vdp.cabinetoffice.gov.uk-website
         shell: bash
