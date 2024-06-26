@@ -1,6 +1,7 @@
 # We would like to thank the following:
 # [yyyy-mm-dd] Name -- description
 
+[2024-06-06] li0nheart - reported a Information Exposure vulnerability in a gov.uk service
 [2024-05-18] Dejaun Barker (exss) - reported a Subdomain Takeover vulnerability in a gov.uk service
 [2024-03-14] Miguel Segovia Gil (miguelse) - reported a Missing Rate-Limiting Control in a gov.uk service
 [2024-02-08] Sushmita Poudel (sushmita_poudel) - reported a Cross-Site Request Forgery in a gov.uk service
