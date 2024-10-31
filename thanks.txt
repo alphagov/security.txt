@@ -1,7 +1,7 @@
 # We would like to thank the following:
 # [yyyy-mm-dd] Name -- description
 
-[2024-10-31] Ariel Rachamim Omri Inbar - reported a subdomain takeover vulnerability on 2 GOV.UK instances
+[2024-10-31] Ariel Rachamim Omri Inbar - reported a subdomain takeover vulnerability on 2 GOV.UK services
 [2024-09-04] Darshan Naresh Naik - reported a HTML Injection vulnerability in a GOV.UK service
 [2024-05-18] Dejaun Barker (exss) - reported a Subdomain Takeover vulnerability in a gov.uk service
 [2024-03-14] Miguel Segovia Gil (miguelse) - reported a Missing Rate-Limiting Control in a gov.uk service
